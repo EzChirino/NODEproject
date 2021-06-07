@@ -2,13 +2,13 @@ const express = require("express");
 
 const router = express.Router();
 
-// const personasControllers = require('../controllers/personas-controllers');
+const personasControllers = require('../controllers/personas-controllers');
 
 // => /categoria/
-// router.get('/', librosControllers.getLibros);
-// router.get('/:id', librosControllers.getLibroPorId);
-// router.post('/', librosControllers.postCategoria);
-// router.patch('/:id', librosControllers.updateCategoria);
-// router.delete('/:id', librosControllers.deleteCategoria);
+router.get('/', personasControllers.getPersonas);
+router.get('/:id', personasControllers.getPersonasPorId);
+router.post('/', personasControllers.postPersonas);
+router.patch('/:id', personasControllers.updatePersonas);
+router.delete('/:id', personasControllers.deletePersonas);
 
 module.exports = router;
