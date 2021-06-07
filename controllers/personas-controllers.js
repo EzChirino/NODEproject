@@ -3,7 +3,7 @@ const db = require('../db-conection');
 
 /** POST PERSONAS */
 
-const postPersona = async (req, res, next) => {
+const postPersonas = async (req, res, next) => {
 
   const { nombre, apellido, email, alias } = req.body;
 
@@ -74,7 +74,7 @@ const getPersonasPorId = async (req, res, next) => {
 
 
 /** DELETE PERSONA */
-const deletePersona = async (req, res, next) => {
+const deletePersonas = async (req, res, next) => {
 
   const personaId = req.params.id; // if empty undefinied
 
